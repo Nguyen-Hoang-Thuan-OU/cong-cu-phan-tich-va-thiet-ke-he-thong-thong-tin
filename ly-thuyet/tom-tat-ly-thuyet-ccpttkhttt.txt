@@ -1,0 +1,95 @@
+﻿[KHÁI NIỆM HỆ THỐNG THÔNG TIN]
+
+Mô tả hiện trạng (yêu cầu hệ thống)
+-> Phân tích về chức năng bằng BPM (phân rã ở mức thấp nhất)
+-> Mô tả ở mức ý niệm bằng CDM
+-> Tự động tạo PDM bằng Power Designer
+-> Kiểm tra và chỉnh sửa lại dữ liệu được sinh tự động
+-> Chọn HQTCSDL mong muốn
+-> Tự động tạo SQL Script tương ứng với HQTCSDL đã chọn
+
+* Hệ thống thông tin (Infomation Systems - IS): bên khoa học máy tính, cụm từ này thiên về phần mềm/ứng dụng (Software/Application).
+
+* Nghiệp vụ: tính chất đặc trưng của từng doanh nghiệp, mô hình kinh doanh, "bài toán" mà doanh nghiệp đang sử dụng, cách mà doanh nghiệp đang vận hành.
+
+** Công cụ phân tích và thiết kế hệ thống thông tin: giới thiệu bộ công cụ Power Designer để sử dụng trong quá trình phân tích và thiết kế hệ thống thông tin (hệ thống phần mềm). Công cụ sẽ hỗ trợ cho quá trình tạo ra những bản thiết kế bằng mô hình diễn ra nhẹ nhàng hơn, đỡ tốn công sức và nhiều người có thể cùng làm việc với nhau.
+	- Hướng cấu trúc (structured): tách riêng giữa chức năng và dữ liệu.
+	- Hướng đối tượng (object-oriented): nhìn nhận sự vật, hiện tượng như từng đối tượng và độc lập, từng đối tượng sẽ có những thuộc tính/đặc tính và tương tác/chức năng riêng lẻ.
+
+** Phân chia mô hình: sau khi xem hiện trạng mô tả của hệ thống.
+
+	- Chức năng: quy trình nghiệp vụ (BPM): xem xét hệ thống yêu cầu những nhóm chức năng nào, xem xét về cây phân cấp chức năng (chức năng nào bao trùm chức năng nào).
+	- Dữ liệu:
+		+ Ý niệm dữ liệu (CDM): tư duy, suy nghĩ - gần gũi với ngôn ngữ tự nhiên, không cần quan tâm phải thiết kế ở hệ quản trị CSDL nào. Chỉ quan tâm nó là một thực thể và cần có thuộc tính gì, mối quan hệ như thế nào, tham giao vào chức năng nào của hệ thống, dữ liệu vào-ra của nó,...
+		+ Vậy lý dữ liệu (PDM): cài đặt thực tế các trường, bảng,... trong CSDL. Mô hình thường đi kèm với một hệ quản trị CSDL nào đó để thiết kế dữ liệu. Có thể tự động tạo bằng công cụ Power Designer.
+
+* Nhu cầu xây dựng một hệ thống để quản lý: sản xuất, kho, bán hàng, mua hàng,...
+	- Xây dựng mới hệ thống.
+	- Xây dựng lại do hệ thống cũ có quá nhiều vấn đề.
+	- Cập nhật thêm những tính năng mới (chưa có) trên ứng dụng đã có sẵn.
+
+Số lượng dữ liệu khổng lồ sau hàng chục năm tin học hoá.
+
+Dữ liệu: tĩnh
+Chức năng: động
+
+* Phân loại hệ thống thông tin: theo độ lớn của khối lượng dữ liệu tương tác (từ 1-6), độ quan trọng sẽ tuỳ thuộc vào lĩnh vực của doanh nghiệp.
+	1. Hệ xử lý dữ liệu/Tác nghiệp (DPS - Data Processing System)/TPS - Transaction Processing Systems: đã có sẵn dữ liệu, chỉ quan tâm làm sao để hệ thống có thể hoạt động và xử lý những chức năng mà không gặp lỗi (phần mềm).
+		-> Chuyên về chức năng.
+			Ví dụ: trên website bán hàng, để bán được hàng thì chức năng thanh toán đơn hàng phải hoạt động ổn định.
+
+	2. Hệ thống hỗ trợ văn phòng (OSS - Office Support System): soạn thảo, thư tín,... sử dụng trong nội bộ.
+
+	3. Hệ thông tin quản lý (MIS - Management Information System): yêu cầu phải có hệ thống để xem tổng quan. Có nhiệm vụ lưu trữ, thông qua những con số để thống kê (mặt hàng đã nhập, đã mua,...), báo cáo, diễn giải với cấp trên,... tuỳ theo nhu cầu bằng cách tính tổng, gom nhóm và lọc lại những gì hệ thống cần dưới dạng biểu đồ.
+		-> Chuyên về báo cáo thống kê.
+
+	4. Hệ hỗ trợ quyết định (DSS - Decision Support System): hệ thống có "kinh nghiệm" nhờ việc "học thuộc" chu kỳ/quy luật nào đó thông qua việc thực hiện nhiều báo cáo, thống kê dựa vào những dữ liệu được lấy từ hệ thống MIS. Quyền quyết định vẫn thuộc về con người, hệ thống chỉ hỗ trợ đưa ra những khuyến cáo, gợi ý nên phải làm gì tiếp theo cho con người tham khảo.
+		-> Chuyên hỗ trợ để con người đưa ra quyết định.
+			Ví dụ: các nền tảng kinh doanh trong lĩnh vực ẩm thực áp dụng để biết những khung giờ bán được nhiều hoặc ít, từ đó đưa ra quyết định có giảm giá hay không.
+
+	5. Hệ thống điều hành (EIS - Executive Infomation System): 
+
+	6. Hệ chuyên gia (ES - Expert System): những thông tin chuyên sâu, quy trình đòi hỏi sự quản lý khắc khe. Con người sẽ dạy cho máy để máy nhận dạng và dự đoán được chính xác hơn.
+		-> Các bộ máy AI.
+
+==========================================================================================
+
+Ví dụ 1:
+
+Để xây dựng cơ sở dữ liệu cho ứng dụng lưu trữ và truy xuất thông tin về một kỳ World Cup, người ta đưa ra những nhu cầu dữ liệu như sau: Thông tin về cầu thủ gồm: mã cầu thủ, tên, ngày sinh, quốc tịch (giả sử mỗi cầu thủ chỉ có 1 quốc tịch). Trong một kỳ World Cup, cầu thủ có quốc tịch nước nào thì tham gia đội bóng của nước đó. Một cầu thủ có một vị trí đá trong đội bóng. Một đội bóng có 11 cầu thủ chính thức , 11 cầu thủ dự bị, một huấn luyện viên trưởng và 2 huấn luyện viên phó. Một trận đấu có mã trận đấu, ngày, giờ, sân thi đấu,tỷ số. Mỗi trận đấu có 2 đội bóng của 2 nước tham gia. Thông tin về trọng tài gồm: mã trọng tài, tên, ngày sinh, quốc tịch. Trọng tài chính và 2 trọng tài biên phải khác quốc tịch 2 đội bóng. Hệ thống cần lưu thông tin về việc làm bàn cũng như số thẻ vàng, thẻ đỏ của mỗi cầu thủ trong mỗi trận đấu.
+
+	-> Chỉ đơn thuần mô tả một hệ thống về mặt dữ liệu (dữ liệu cũng chưa hoàn chỉnh) mà không đề cập đến chức năng để thường xuyên thực hiện giao tác. Ban đầu chỉ cần một file dữ liệu và sau đó import vào, không phải nhập lại thông tin cho mỗi trận đấu. Nếu có, ở mỗi trận đấu, người ta sẽ cung cấp những thông tin: thời gian, địa điểm, sân đấu, các đội bóng, số thẻ vàng và thẻ đỏ, số bàn thắng, thời lượng trận đấu,...
+
+==========================================================================================
+
+--------------------------------------------------------------------------------
+
+------------------------------------------------------------
+
+----------------------------------------
+
+--------------------
+
+----------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

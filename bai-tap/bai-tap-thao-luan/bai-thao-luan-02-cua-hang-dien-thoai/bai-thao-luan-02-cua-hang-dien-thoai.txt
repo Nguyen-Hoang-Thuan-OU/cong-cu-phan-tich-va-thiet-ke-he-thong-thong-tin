@@ -1,0 +1,86 @@
+﻿[THẢO LUẬN 02]
+
+** Cho hiện trạng mô tả như sau:
+
+Đối tượng bán hàng của PL Mobile gồm người tiêu dùng và các các công ty có thể trao đổi hàng hóa với PL. Mỗi quầy hàng của PL Mobile có trưng bày nhiều mặt hàng như Nokia, LG, Siemens, Sony Ericsson,... PL Mobile có nguồn cung cấp bởi nhiều nhà sản xuất và nhà cung cấp khác, bên cạnh đó trung tâm còn nhiều hình thức quan trọng là buôn bán, trao đổi, giao dịch,...
+
+Vì thế cần phải có một phần mềm quản lý chuyên nghiệp để giảm tối thiểu rủi ro và nhân viên dễ dàng trong việc lý.
+
+	- Nhóm trưởng: Là người chịu trách nhiệm toàn bộ các hoạt động kinh doanh và mọi kế hoạch của công ty.
+
+	- Bộ phận quản lý: Có nhiệm vụ tổng kết số liệu do bộ phận bán hàng và thu ngân chuyển đến, cân đối số lượng hàng hóa trên quầy và số lượng bán ra để tìm ra sai sót giữa hai khâu này nếu có.
+
+	- Bộ phận nghiên cứu thị trường: Có nhiệm vụ mua hàng, nhận hàng từ nhà cung cấp hay các nguồn khác theo chỉ đạo của nhóm trưởng.
+
+	- Bộ phận kỹ thuật: Thực hiện việc kiểm tra điện thoại cho khách hàng khi có yêu cầu và làm công việc bảo hành cho khách hàng.
+
+	- Bộ phận kế toán: Thực hiện điều chỉnh giá các mặt hàng và phân tích số liệu xuất nhập, cố vấn cho nhóm trưởng các kế hoạch thực hiện. 
+
+	- Bộ phận thu ngân: Tính tiền của khách hàng, mọi số lượng hàng bán ra phải được nhập vào máy tính để nhân viên quản lý sẽ thu lại dữ liệu của họ đã nhập vào.
+
+	- Nhân viên bán hàng: Là nhân viên của công ty trực tiếp bán hàng đến người dùng của siêu thị. Nhân viên này có nhiệm vụ quản lý các mặt hàng trên quầy mình phụ trách, cuối ca phải kiểm tra và báo cáo số lượng hàng tồn trên quầy để giao ca.
+
+---------------------------------------------
+
+Một số quy trình sau:
+
+1. Nhập hàng:
+
+Nguồn hàng được nhập dưới hai hình thức:
+
+	- Đơn đặt hàng: Hợp đồng mua bán giữa công ty và nhà cung cấp.
+
+	- Hợp đồng trao đổi hàng hóa giữa công ty với công ty khác hoặc với các công ty kinh doanh điện thoại.
+
+Hàng nhập về sẽ được phân loại, dán tem, mã phân loại mặt hàng, xong định giá và cho nhập vào kho.
+
+Các báo cáo liên quan đến nhập hàng được thể hiện qua phiếu mua hàng và thẻ kho theo mẫu sau: *Phiếu mua hàng*
+
+Khi hàng về nhập kho, thủ kho cần ghi thêm số lượng hàng nhập vào thẻ kho. Mỗi mặt hàng đều có một thẻ kho riêng.
+
+---------------------------------------------
+
+2. Bán hàng:
+
+Bộ phận bán hàng chuyển hàng từ kho ra quầy bán. Quầy hàng là nơi trưng bày nhiều mặt hàng cùng chủng loại. 
+
+Cách tổ chức này giúp nhân viên bán hàng dễ kiểm soát hàng hóa ở quầy để bổ sung khi hết hàng. 
+
+Hằng ngày, căn cứ vào tình hình bán hàng của công ty, bộ phận nghiệp vụ sẽ thống kê để biết được mặt hàng nào bán chạy, mặt hàng nào bán không chạy, mặt hàng nào đã hết hoặc còn ít trong kho, từ đó đưa ra yêu cầu nhập thêm hàng mới, hoặc xuất hàng từ kho ra quầy đối với mặt hàng quầy còn ít.
+
+Các báo cáo liên quan đến bán hàng được thể hiện qua phiếu đề nghị, phiếu xuất, phiếu giao ca, hóa đơn bán hàng: *Phiếu đề nghị*
+
+Sau khi kiểm tra thấy phiếu đề nghị là hợp lý, nhân viên đứng quầy sẽ nhận hàng từ kho chuyển ra.
+
+Việc xuất hàng từ kho ra quầy sẽ được thể hiện dưới dạng phiếu xuất kho: *Phiếu xuất*
+
+Mỗi nhân viên đứng quầy quản lý một mặt hàng xác định. Cuối mỗi ca họ phải kiểm tra lại hàng hóa còn lại trên quầy để giao ca, đồng thời họ phải nộp lại phiếu giao ca cho quản lý: *Phiếu giao ca*
+
+Nhân viên thu ngân sẽ nhập mã hàng hóa in trên mặt hàng và số lượng vào máy. Máy tính sẽ tự động tính tổng tiền và in hóa đơn cho khách hàng: *Hoá đơn bán hàng*
+
+=================================================================================
+
+Câu 1: Hiện trạng trên mô tả về hệ thống thông tin ở cấp nào (TPS/DPS, MIS, DSS)? Tại sao? Hãy giải thích với dẫn chứng từ hiện trạng được mô tả ở trên.
+
+Câu 2: Hãy vẽ mô hình BPM (bao gồm các BPM diagram cho các chức năng) của hệ thống được mô tả ở trên.
+
+=================================================================================
+
+Câu 1: Hệ thống trên thuộc phân loại MIS vì:
+
+Vì hệ thống trên cung cấp các thông tin phục vụ việc quản lí cửa hàng, cụ thể:
+
+- Nhân viên nhập hàng dễ dàng quản lí, thống kê các dữ liệu Hóa đơn, Phiếu mua hàng và Thẻ kho trong ca làm của mình.
+
+- Nhân viên bán hàng tự quản lí hàng hóa ở quầy của mình theo ca. Đồng thời lưu trữ lại thông tin quản lí hàng hóa trong ca đó bằng Phiếu giao ca.
+
+- Nhân viên thu ngân quản lí đơn hàng mình dựa vào Hóa đơn mua hàng đã xuất ra trong ca làm việc.
+
+- Nhân viên quản lí thống kê tình trạng các loại hàng nhờ Hóa đơn mua hàng của các khách hàng, từ đó đưa ra phân tích và quyết định trong việc điều phối hàng hóa (nhập hàng thiếu, xuất hàng thừa, tình trạng bán hàng). Từ Phiếu mua hàng, Phiếu giao ca, Hóa đơn mua hàng, nhân viên quản lí dễ dàng quản lí và kiểm soát được hoạt động cũng như năng suất làm việc của các nhân viên trong cửa hàng.
+
+
+
+
+
+
+

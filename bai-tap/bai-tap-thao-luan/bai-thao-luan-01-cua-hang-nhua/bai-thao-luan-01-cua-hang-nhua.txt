@@ -1,0 +1,58 @@
+﻿[THẢO LUẬN 01]
+
+** Cho hệ thống thông tin (phần mềm) có mô tả như sau: Hệ thống thông tin "Quản lý của cửa hàng nhựa".
+
+Cửa hàng Nhựa X là cửa hàng chuyên phân phối sỉ các sản phẩm nhựa gia dụng, các sản phẩm được sản xuất từ nhiều loại nhựa khác nhau như: PP, PE, PS, PVC,... Cửa hàng hoạt động thông qua một số hoạt động sau:
+
+·         NHẬP HÀNG:
+Để đảm bảo cửa hàng có lượng hàng ổn định cung cấp cho khách hàng, các loại hàng phải có số lượng trữ tối thiểu trong kho. Nếu số lượng hàng dự trữ này thấp hơn quy định thì nhân viên quản lý kho lập danh sách hàng cần nhập, chọn nhà cung cấp và lập yêu cầu nhập hàng, sau đó đưa chủ cửa hàng duyệt.
+
+Khi hàng về, nhân viên kho sẽ kiểm tra chất lượng hàng, sau đó viết phiếu nhập kho.
+
+Nhân viên kế toán lập phiếu chi, thanh toán với nhà cung cấp và lưu thông tin vào CSDL về nhà cung cấp (Mã NCC, tên NCC, địa chỉ, điện thoại, email,...), Phiếu chi (Số phiếu chi, ngày chi, số tiền chi, nội dung), Phiếu nhập kho (Số PN, ngày nhập, số lượng nhập, nội dung).
+	-> Thực thể (thông tin qua-lại trong quy trình hoạt động: Nhà cung cấp, Phiếu chi, Phiếu nhập kho.
+
+---------------------------------------------
+
+·         BÁN HÀNG:
+* Đối với khách hàng mua lẻ: khách hàng trực tiếp lựa chọn sản phẩm và thanh toán đầy đủ cho cửa hàng.
+
+* Đối với khách mua sỉ: khách hàng trực tiếp đến cửa hàng hoặc nhân viên sẽ gửi bảng báo giá cho khách hàng. Sau đó, khách hàng sẽ gửi yêu cầu mua hàng thông qua đơn đặt hàng.
+
+Bộ phận bán hàng tiếp nhận đơn đặt hàng, kiểm tra số lượng hàng hóa (số lượng trong kho). Nếu không đủ số lượng, bộ phận bán hàng thông báo hết hàng và từ chối yêu cầu của khách hàng. Nếu đáp ứng đủ lượng hàng, nhân viên kho sẽ viết phiếu xuất hàng, bộ phận bán hàng lập hoá đơn thanh toán.
+
+Bộ phận bán hàng sau khi nhận hàng từ kho sẽ kiểm tra số lượng hàng, đồng thời thực hiện việc giao hàng tận nơi (nếu khách hàng yêu cầu) đối với khách hàng mua sỉ.
+
+Khi khách hàng thanh toán, bộ phận kế toán lập phiếu thu. Việc thanh toán có thể chia làm nhiều đợt, mỗi đợt thanh toán khách hàng sẽ nhận được hoá đơn bán hàng, trong đó có ghi số hoá đơn, ngày lập hoá đơn, số tiền đã thanh toán, số tiền còn nợ lại của khách hàng,... Nhân viên kế toán sẽ tiến hành theo dõi công nợ đến khi khách hàng thanh toán đầy đủ.
+
+Nếu khách hàng thanh toán đầy đủ trong lần đầu tiên mua hàng sẽ được cửa hàng ưu đãi giảm giá (đối với khách hàng mua sỉ).
+
+Nhân viên kế toán sẽ lưu thông tin khách hàng (Mã khách hàng, họ tên, ngày sinh, giới tính, địa chỉ,...), phiếu thu (số phiếu thu, ngày thu, số tiền thu, nội dung), phiếu xuất (số phiếu xuất, ngày xuất, số lượng xuất, tên hàng,...), công nợ KH vào CSDL.
+
+---------------------------------------------
+
+·         THỐNG KÊ, BÁO CÁO:
+Nhân viên quản lý kho sẽ thống kê số lượng hàng tồn kho, số lượng hàng nhập, hàng xuất. Nếu số lượng hàng thấp hơn lượng dữ trữ tối thiểu sẽ tiến hành nhập kho.
+
+Khi chủ cửa hàng có yêu cầu về tình hình kinh doanh, công nợ, nhân viên của từng bộ phận sẽ tập hợp, thống kê các số liệu liên quan sau đó báo cáo cho chủ cửa hàng.
+
+=================================================================================
+
+Câu 1: Mô tả về hệ thống trên là thuộc phân loại HTTT cấp nào? Tại sao? Hãy giải thích.
+
+Câu 2: Anh/Chị hãy xác định các chức năng và luồng dữ liệu của chúng, dùng DFD để mô tả.
+
+=================================================================================
+
+Câu 1: Hệ thống trên thuộc phân loại MIS vì:
+
+* Ở cấp Xử lí dữ liệu: Hệ thống đáp ứng được các công việc mà cửa hàng cần như: ghi nhận thông tin của nhà cung cấp, phiếu thu, phiếu chi, phiếu nhập kho, khách mua hàng sỉ lẻ, công nợ của khách hàng,... Cụ thể là lưu lại các giao dịch mua bán hằng ngày vào CSDL.
+
+* Ở cấp Thông tin quản lí: Hệ thống đáp ứng được các công việc như thống kê số lượng hàng tồn kho, số lượng hàng nhập, hàng xuất; thống kê lãi lỗ,... nhằm mục đích quản lí hiệu quả của quá trình kinh doanh của cửa hàng.
+
+
+
+
+
+
+
